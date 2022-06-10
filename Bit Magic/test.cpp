@@ -1,4 +1,3 @@
-// You are given a number N. Find the total count of set bits for all numbers from 1 to N(both inclusive).
 #include <bits/stdc++.h>
 #define ll long long
 #define vi vector<int>
@@ -22,21 +21,11 @@
         cout << a[i] << " ";
 #define Mod 1000000007
 using namespace std;
-int countBit1toN(int n)
-{
-    if (n <= 0)
-        return 0;
-    int x = log2(n);
-    int ans = pow(2, x - 1) * x + (n - pow(2, x) + 1);
-    return ans = ans + countBit1toN(n - pow(2, x));
-    // F(n) = (2^(x-1))*x + (n - 2^x + 1) + F(n - 2^x);
-}
 void solve()
 {
     int n;
     cin >> n;
-    int ans = countBit1toN(n);
-    cout << ans;
+    cout << n;
 }
 int main()
 {
